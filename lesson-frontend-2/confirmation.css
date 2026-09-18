@@ -1,0 +1,457 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #faf6f0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 56px;
+  height: 90px;
+  background: #ffffff;
+  border-bottom: 1px solid #ede8e1;
+}
+
+.logo-text {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.nav-item {
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid transparent;
+}
+
+.nav-item.active {
+  border-bottom-color: #4f5d50;
+}
+
+.nav-item a {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+  text-decoration: none;
+}
+
+.login-button {
+  padding: 12px 28px;
+  border-radius: 100px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.main-booking-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 56px 80px;
+  gap: 40px;
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 912px;
+  height: 36px;
+}
+
+.title-with-back {
+  display: flex;
+  gap: 12px;
+}
+
+.back-button {
+  border: 1.2px solid #d9d1c7;
+  border-radius: 18px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 23px;
+  color: #222222;
+}
+
+.page-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  color: #222222;
+}
+
+.step-indicator {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.circle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  background: #4f5d50;
+}
+
+.step.done .circle {
+  background: #c1a27e;
+}
+
+.circle.empty {
+  background: transparent;
+  border: 1px solid #6b6661;
+}
+
+.circle span {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.circle.empty span {
+  color: #6b6661;
+}
+
+.step.done .circle span {
+  font-size: 14px;
+}
+
+.step-label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #222222;
+}
+
+.step-label.light {
+  font-weight: 400;
+  color: #6b6661;
+}
+
+.step-line {
+  width: 40px;
+  height: 0px;
+  border: 1px solid #eadbc8;
+}
+
+.centered-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 28px;
+  gap: 32px;
+  width: 520px;
+  background: #ffffff;
+  border: 1px solid #eadbc8;
+  border-radius: 20px;
+  align-self: center;
+}
+
+.booking-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 100%;
+}
+
+.booking-info .section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #222222;
+  width: 100%;
+}
+
+.details-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+  width: 100%;
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+}
+
+.detail-row .label {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+}
+
+.detail-row .value {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #222222;
+}
+
+.detail-divider {
+  border: none;
+  border-top: 1px solid #ede8e1;
+  width: 100%;
+  margin: 0;
+}
+
+.total-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+}
+
+.total-row .label {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #222222;
+}
+
+.total-row .price {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #c1a27e;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact-form .form-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #222222;
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 6px;
+  width: 100%;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 17px;
+  color: #6b6661;
+}
+
+.input-group input,
+.input-group textarea {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 100%;
+  border: 1px solid #eadbc8;
+  border-radius: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #222222;
+  background: #ffffff;
+}
+
+.input-group input {
+  height: 44px;
+}
+
+.input-group textarea {
+  padding: 16px;
+  height: 80px;
+  resize: vertical;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #6b6661;
+  opacity: 0.6;
+}
+
+.next-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 36px;
+  width: 100%;
+  height: 52px;
+  background: #4f5d50;
+  border-radius: 100px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.next-btn:hover {
+  background: #3d4a3e;
+}
+
+.footer {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 56px 48px;
+  border-top: 1px solid #ede8e1;
+  margin-top: auto;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-brand .brand-name {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: #222222;
+}
+
+.footer-brand .brand-desc {
+  max-width: 360px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+}
+
+.footer-links-row {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.links-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links-col .col-title {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #4f5d50;
+}
+
+.links-col a {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+  text-decoration: none;
+}
+
+.footer-line {
+  border: 1px solid #ede8e1;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 0;
+}
+
+.footer-bottom .copy {
+  font-size: 12px;
+  line-height: 16px;
+  color: #6b6661;
+}
+
+.footer-bottom .legal {
+  font-size: 12px;
+  line-height: 16px;
+  color: #6b6661;
+  margin-left: 20px;
+}

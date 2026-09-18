@@ -1,0 +1,539 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #faf6f0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 56px;
+  height: 90px;
+  background: #ffffff;
+  border-bottom: 1px solid #ede8e1;
+}
+
+.logo-text {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.nav-item {
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid transparent;
+}
+
+.nav-item.active {
+  border-bottom-color: #4f5d50;
+}
+
+.nav-item a {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+  text-decoration: none;
+}
+
+.login-button {
+  padding: 12px 28px;
+  border-radius: 100px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.main-booking-flow {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 56px 80px;
+  gap: 40px;
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 912px;
+  height: 36px;
+}
+
+.title-with-back {
+  display: flex;
+  gap: 12px;
+}
+
+.back-button {
+  border: 1.2px solid #d9d1c7;
+  border-radius: 18px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 23px;
+  color: #222222;
+}
+
+.page-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  color: #222222;
+}
+
+.step-indicator {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.circle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  background: #4f5d50;
+}
+
+.step.done .circle {
+  background: #c1a27e;
+}
+
+.circle.empty {
+  background: transparent;
+  border: 1px solid #6b6661;
+}
+
+.circle span {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.circle.empty span {
+  color: #6b6661;
+}
+
+.step-label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #222222;
+}
+
+.step-label.light {
+  font-weight: 400;
+  color: #6b6661;
+}
+
+.step-line {
+  width: 40px;
+  height: 0px;
+  border: 1px solid #eadbc8;
+}
+
+.panels {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
+  width: 100%;
+}
+
+.calendar-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+  gap: 24px;
+  width: 392px;
+  min-height: 428px;
+  background: #ffffff;
+  border: 1px solid #ede8e1;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.calendar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  height: 32px;
+}
+
+.calendar-header .month-year {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  line-height: 27px;
+  color: #222222;
+}
+
+.calendar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.calendar-nav button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background: #f0f4ef;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #4f5d50;
+  font-weight: 600;
+}
+
+.days-grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+  width: 100%;
+}
+
+.days-labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+  height: 24px;
+}
+
+.days-labels span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 24px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6b6661;
+}
+
+.grid-days {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 100%;
+}
+
+.grid-days .week-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+  height: 48px;
+}
+
+.grid-days .day-cell {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 48px;
+  height: 48px;
+  border-radius: 100px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #212121;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.day-cell.other-month {
+  color: #6b6661;
+  opacity: 0.4;
+}
+
+.day-cell.selected {
+  background: #4f5d50;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.day-cell.today {
+  font-weight: 600;
+  color: #212121;
+}
+
+.day-cell:hover:not(.selected) {
+  background: #f0f4ef;
+}
+
+.time-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+  gap: 24px;
+  width: 480px;
+  min-height: 265px;
+  background: #ffffff;
+  border: 1px solid #ede8e1;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.time-box .time-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  line-height: 27px;
+  color: #222222;
+  align-self: stretch;
+}
+
+.time-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 12px;
+  width: 100%;
+}
+
+.time-slot {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 12px 20px;
+  background: #f0f4ef;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4f5d50;
+  cursor: pointer;
+  border: none;
+  transition: all 0.1s ease;
+  flex: 0 0 auto;
+}
+
+.time-slot.unavailable {
+  opacity: 0.4;
+  border: 1px solid #ede8e1;
+  background: transparent;
+  color: #4f5d50;
+  cursor: not-allowed;
+}
+
+.time-slot.selected {
+  background: #4f5d50;
+  color: #ffffff;
+}
+
+.time-slot:hover:not(.unavailable):not(.selected) {
+  background: #e2e8e0;
+}
+
+.bottom-bar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #eadbc8;
+  border-radius: 16px;
+}
+
+.bottom-bar .selected-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.bottom-bar .selected-info .label {
+  font-size: 13px;
+  line-height: 17px;
+  color: #6b6661;
+}
+
+.bottom-bar .selected-info .value {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #222222;
+}
+
+.next-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 14px 36px;
+  background: #4f5d50;
+  border-radius: 100px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.next-btn:hover {
+  background: #3d4a3e;
+}
+
+.footer {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 56px 48px;
+  border-top: 1px solid #ede8e1;
+  margin-top: auto;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-brand .brand-name {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: #222222;
+}
+
+.footer-brand .brand-desc {
+  max-width: 360px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+}
+
+.footer-links-row {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.links-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links-col .col-title {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #4f5d50;
+}
+
+.links-col a {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+  text-decoration: none;
+}
+
+.footer-line {
+  border: 1px solid #ede8e1;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 0;
+}
+
+.footer-bottom .copy {
+  font-size: 12px;
+  line-height: 16px;
+  color: #6b6661;
+}
+
+.footer-bottom .legal {
+  font-size: 12px;
+  line-height: 16px;
+  color: #6b6661;
+  margin-left: 20px;
+}
