@@ -1,3 +1,4 @@
+/* ===== reset & base ===== */
 * {
   margin: 0;
   padding: 0;
@@ -9,14 +10,16 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
-.page {
+/* ===== page ===== */
+.confirmation-page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background: #faf6f0;
 }
 
-.header {
+/* ===== header ===== */
+.confirmation-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,36 +30,37 @@ body {
   border-bottom: 1px solid #ede8e1;
 }
 
-.logo-text {
+.confirmation-logo-text {
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
   font-size: 32px;
   line-height: 39px;
+  cursor: pointer;
 }
 
-.nav-links {
+.confirmation-nav-links {
   display: flex;
   flex-direction: row;
   gap: 40px;
 }
 
-.nav-item {
+.confirmation-nav-item {
   padding-bottom: 4px;
   border-bottom: 1.5px solid transparent;
 }
 
-.nav-item.active {
+.confirmation-nav-item.active {
   border-bottom-color: #4f5d50;
 }
 
-.nav-item a {
+.confirmation-nav-item a {
   font-size: 14px;
   line-height: 18px;
   color: #6b6661;
   text-decoration: none;
 }
 
-.login-button {
+.confirmation-login-button {
   padding: 12px 28px;
   border-radius: 100px;
   background: transparent;
@@ -65,9 +69,12 @@ body {
   font-size: 13px;
   line-height: 17px;
   text-transform: uppercase;
+  border: 1px solid #4f5d50;
+  color: #4f5d50;
 }
 
-.main-booking-flow {
+/* ===== main layout ===== */
+.confirmation-layout {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,22 +85,23 @@ body {
   width: 100%;
 }
 
-.header-row {
+/* ===== header-row ===== */
+.confirmation-header-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0px;
-  width: 912px;
+  width: 100%;
   height: 36px;
 }
 
-.title-with-back {
+.confirmation-title-with-back {
   display: flex;
   gap: 12px;
 }
 
-.back-button {
+.confirmation-back-button {
   border: 1.2px solid #d9d1c7;
   border-radius: 18px;
   background: transparent;
@@ -103,7 +111,7 @@ body {
   color: #222222;
 }
 
-.page-title {
+.confirmation-page-title {
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
   font-size: 28px;
@@ -111,7 +119,8 @@ body {
   color: #222222;
 }
 
-.step-indicator {
+/* ===== step indicator ===== */
+.confirmation-step-indicator {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -120,14 +129,14 @@ body {
   flex: 1;
 }
 
-.step {
+.confirmation-step {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 12px;
 }
 
-.circle {
+.confirmation-circle {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -138,48 +147,49 @@ body {
   background: #4f5d50;
 }
 
-.step.done .circle {
+.confirmation-step.done .confirmation-circle {
   background: #c1a27e;
 }
 
-.circle.empty {
+.confirmation-circle.empty {
   background: transparent;
   border: 1px solid #6b6661;
 }
 
-.circle span {
+.confirmation-circle span {
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   color: #ffffff;
 }
 
-.circle.empty span {
+.confirmation-circle.empty span {
   color: #6b6661;
 }
 
-.step.done .circle span {
+.confirmation-step.done .confirmation-circle span {
   font-size: 14px;
 }
 
-.step-label {
+.confirmation-step-label {
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
   color: #222222;
 }
 
-.step-label.light {
+.confirmation-step-label.light {
   font-weight: 400;
   color: #6b6661;
 }
 
-.step-line {
+.confirmation-step-line {
   width: 40px;
   height: 0px;
   border: 1px solid #eadbc8;
 }
 
+/* ===== centered card ===== */
 .centered-card {
   box-sizing: border-box;
   display: flex;
@@ -194,6 +204,7 @@ body {
   align-self: center;
 }
 
+/* ===== booking info ===== */
 .booking-info {
   display: flex;
   flex-direction: column;
@@ -274,6 +285,7 @@ body {
   color: #c1a27e;
 }
 
+/* ===== contact form ===== */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -341,7 +353,7 @@ body {
   opacity: 0.6;
 }
 
-.next-btn {
+.confirmation-next-btn {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -360,11 +372,12 @@ body {
   transition: background 0.15s;
 }
 
-.next-btn:hover {
+.confirmation-next-btn:hover {
   background: #3d4a3e;
 }
 
-.footer {
+/* ===== footer ===== */
+.confirmation-footer {
   background: #ffffff;
   display: flex;
   flex-direction: column;
@@ -373,20 +386,20 @@ body {
   margin-top: auto;
 }
 
-.footer-top {
+.confirmation-footer-top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
 }
 
-.footer-brand {
+.confirmation-footer-brand {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.footer-brand .brand-name {
+.confirmation-footer-brand .brand-name {
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
   font-size: 28px;
@@ -394,26 +407,26 @@ body {
   color: #222222;
 }
 
-.footer-brand .brand-desc {
+.confirmation-footer-brand .brand-desc {
   max-width: 360px;
   font-size: 14px;
   line-height: 18px;
   color: #6b6661;
 }
 
-.footer-links-row {
+.confirmation-footer-links-row {
   display: flex;
   flex-direction: row;
   gap: 80px;
 }
 
-.links-col {
+.confirmation-links-col {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.links-col .col-title {
+.confirmation-links-col .col-title {
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
@@ -421,21 +434,21 @@ body {
   color: #4f5d50;
 }
 
-.links-col a {
+.confirmation-links-col a {
   font-size: 14px;
   line-height: 18px;
   color: #6b6661;
   text-decoration: none;
 }
 
-.footer-line {
+.confirmation-footer-line {
   border: 1px solid #ede8e1;
   margin-top: 40px;
   margin-bottom: 40px;
   width: 100%;
 }
 
-.footer-bottom {
+.confirmation-footer-bottom {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -443,13 +456,13 @@ body {
   flex-grow: 0;
 }
 
-.footer-bottom .copy {
+.confirmation-footer-bottom .copy {
   font-size: 12px;
   line-height: 16px;
   color: #6b6661;
 }
 
-.footer-bottom .legal {
+.confirmation-footer-bottom .legal {
   font-size: 12px;
   line-height: 16px;
   color: #6b6661;
