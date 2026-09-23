@@ -12,14 +12,14 @@ import "../styles/booking.css";
 // Данные приходят с сервера:
 //   - today — «сегодня» по мнению сервера. Нужно, чтобы календарь
 //             знал, какой месяц показывать и какие дни блокировать.
-//   - slots — слоты на выбранный день для выбранной категории.
+//   - slots — слоты на выбранный день для выбранной услуги.
 //             Запрашиваются при открытии и при смене дня.
 //
 // Пропсы:
-//   categoryId — id категории, для которой запрашиваем слоты.
+//   serviceId — id услуги, для которой запрашиваем слоты.
 //   onBack     — колбэк кнопки «Назад».
 //   onNext     — колбэк кнопки «Далее».
-function BookingScreen({ categoryId, onBack, onNext }) {
+function BookingScreen({ serviceId, onBack, onNext }) {
   // ==========================================================================
   // Состояние загрузки данных с сервера
   // ==========================================================================
@@ -92,15 +92,15 @@ function BookingScreen({ categoryId, onBack, onNext }) {
   // Загрузка слотов при смене дня (или при первой загрузке today)
   // ==========================================================================
   //
-  // useEffect следит за selectedDay и categoryId. Пока selectedDay = null
+  // useEffect следит за selectedDay и serviceId. Пока selectedDay = null
   // (today ещё не пришёл) — ничего не делаем. Как только появятся оба
   // параметра — запрашиваем слоты.
   //
   // При клике на другой день selectedDay меняется → useEffect срабатывает
   // заново → слоты перезагружаются.
   useEffect(() => {
-    // Если ещё нет дня или категории — ждём.
-    if (!selectedDay || !categoryId || !currentMonth || !currentYear) {
+    // Если ещё нет дня или услуги — ждём.
+    if (!selectedDay || !serviceId  || !currentMonth || !currentYear) {
       return;
     }
 
@@ -108,7 +108,7 @@ function BookingScreen({ categoryId, onBack, onNext }) {
       try {
         setLoadingSlots(true);
         setErrorSlots(null);
-        const response = await fetchSlots(categoryId, {
+        const response = await fetchSlots(serviceId , {
           day: selectedDay,
           month: currentMonth,
           year: currentYear,
@@ -122,7 +122,7 @@ function BookingScreen({ categoryId, onBack, onNext }) {
     }
 
     load();
-  }, [selectedDay, currentMonth, currentYear, categoryId]);
+  }, [selectedDay, currentMonth, currentYear, serviceId]);
 
   // ==========================================================================
   // Обработчики

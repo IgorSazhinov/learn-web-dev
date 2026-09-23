@@ -7,15 +7,15 @@ export async function fetchToday() {
   return request("/api/booking/today");
 }
 
-// GET /api/categories/:id/slots?day=&month=&year=
-// Возвращает слоты для категории и даты.
+// GET /api/services/:id/slots?day=&month=&year=
+// Возвращает слоты для услуги и даты.
 // Формат: { date: { day, month, year }, slots: [{ time, available }] }.
 //
 // date в ответе нужна клиенту для защиты от гонок: если пользователь
 // быстро кликает по дням, ответы могут прийти не в том порядке.
-export async function fetchSlots(categoryId, date) {
+export async function fetchSlots(serviceId, date) {
   const url =
-    `/api/categories/${categoryId}/slots` +
+    `/api/services/${serviceId}/slots` +
     `?day=${date.day}&month=${date.month}&year=${date.year}`;
   return request(url);
 }

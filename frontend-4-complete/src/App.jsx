@@ -100,11 +100,11 @@ function App() {
       )}
 
       {/* Страница выбора даты и времени.
-          Передаём categoryId — по нему BookingScreen будет
-          запрашивать слоты у сервера. */}
+      serviceId — id выбранной услуги. По нему BookingScreen
+      запрашивает слоты у сервера. */}
       {screen === "booking" && (
         <BookingScreen
-          categoryId={booking.categoryId}
+          serviceId={booking.service?.id}
           onBack={() => goTo("services")}
           onNext={handleConfirmDate}
         />

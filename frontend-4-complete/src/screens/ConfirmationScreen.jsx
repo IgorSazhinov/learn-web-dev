@@ -88,8 +88,7 @@ function ConfirmationScreen({ booking, onBack, onFinish }) {
       setSendError(null);
 
       const payload = {
-        categoryId: booking.categoryId,
-        service: booking.service,
+        serviceId: booking.service?.id,
         date: booking.date,
         time: booking.time,
         name: formValues.name,
